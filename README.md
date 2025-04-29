@@ -1,48 +1,69 @@
-# Astro Starter Kit: Basics
+# ⚽ Proyecto Astro - Sitio Web de Fútbol
 
-```sh
-npm create astro@latest -- --template basics
-```
+Bienvenido al proyecto de creación de un sitio web informativo sobre el mundo del fútbol. Este proyecto es desarrollado utilizando el framework **Astro** y siguiendo el flujo de trabajo **GitFlow**.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🌟 Descripción
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Este sitio web tiene como objetivo ofrecer noticias, historia, jugadores destacados y estadísticas relacionadas con el fútbol. El contenido está diseñado para ser ligero, rápido y adaptable a cualquier dispositivo.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 🚀 Tecnologías Utilizadas
 
-## 🚀 Project Structure
+- [Astro](https://astro.build/) - Framework principal
+- HTML5
+- CSS3
+- JavaScript (solo si es necesario)
+- Posiblemente TailwindCSS para estilos más rápidos (opcional)
 
-Inside of your Astro project, you'll see the following folders and files:
+## 📂 Estructura del Proyecto
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- `src/`
+  - `pages/`: Páginas principales del sitio (Inicio, Noticias, Equipos, Historia, Contacto).
+  - `components/`: Componentes reutilizables (Navbar, Footer, Tarjetas de Noticias).
+  - `layouts/`: Diseños base para las páginas.
+- `public/`: Recursos públicos (imágenes, íconos, etc.)
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🛠️ Instalación y ejecución
 
-## 🧞 Commands
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/tu-repositorio.git
+   cd tu-repositorio
+   ```
 
-All commands are run from the root of the project, from a terminal:
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+3. Ejecuta el proyecto en modo desarrollo:
+   ```bash
+   npm run dev
+   ```
 
-## 👀 Want to learn more?
+4. Abre tu navegador en `http://localhost:4321`.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 🛡️ Flujo de trabajo con GitFlow
+
+Este proyecto sigue el modelo **GitFlow**:
+- `main`: Versión estable en producción.
+- `develop`: Rama para integrar nuevas funcionalidades.
+- `feature/*`: Desarrollo de nuevas características.
+- `release/*`: Preparación para lanzamientos.
+- `hotfix/*`: Corrección urgente de errores en producción.
+
+## 📜 Contribución
+
+Para colaborar:
+1. Crea una nueva rama feature desde `develop`.
+2. Realiza tus cambios.
+3. Envía un Pull Request para revisión.
+
+Consulta el archivo `CONTRIBUTING.md` para más detalles.
+
+## ✍️ Autor
+
+- Proyecto desarrollado por el equipo de estudiantes de la Facultad de Ingeniería en Sistemas, Electrónica e Industrial, Universidad Técnica de Ambato.
+
+---
+
+¡Gracias por visitar nuestro proyecto! ⚽🚀
