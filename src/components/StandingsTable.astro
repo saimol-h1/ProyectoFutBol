@@ -3,98 +3,263 @@ const equipos = [
   // MÁXIMA
   {
     nombre: "Deportivo San Juan",
+    torneo: "Torneo Apertura",
     categoria: "Máxima",
     pj: 10, pg: 8, pe: 1, pp: 1, gf: 24, gc: 10, pts: 25,
   },
   {
     nombre: "Atlético Centro",
+    torneo: "Torneo Apertura",
     categoria: "Máxima",
     pj: 10, pg: 6, pe: 1, pp: 3, gf: 18, gc: 14, pts: 19,
+  },
+  {
+    nombre: "Real Parroquial",
+    torneo: "Torneo Apertura",
+    categoria: "Máxima",
+    pj: 10, pg: 5, pe: 2, pp: 3, gf: 16, gc: 12, pts: 17,
+  },
+  {
+    nombre: "Barrio Norte",
+    torneo: "Interbarrios 2025",
+    categoria: "Máxima",
+    pj: 8, pg: 6, pe: 1, pp: 1, gf: 20, gc: 7, pts: 19,
+  },
+  {
+    nombre: "Barrio Central",
+    torneo: "Interbarrios 2025",
+    categoria: "Máxima",
+    pj: 8, pg: 5, pe: 2, pp: 1, gf: 18, gc: 10, pts: 17,
+  },
+  {
+    nombre: "Barrio Sur",
+    torneo: "Interbarrios 2025",
+    categoria: "Máxima",
+    pj: 8, pg: 4, pe: 1, pp: 3, gf: 14, gc: 11, pts: 13,
+  },
+  {
+    nombre: "Clásico FC",
+    torneo: "Clásico de Campeones",
+    categoria: "Máxima",
+    pj: 3, pg: 2, pe: 1, pp: 0, gf: 6, gc: 2, pts: 7,
+  },
+  {
+    nombre: "Unión Campeones",
+    torneo: "Clásico de Campeones",
+    categoria: "Máxima",
+    pj: 3, pg: 1, pe: 1, pp: 1, gf: 5, gc: 4, pts: 4,
+  },
+  {
+    nombre: "Veteranos FC",
+    torneo: "Clásico de Campeones",
+    categoria: "Máxima",
+    pj: 3, pg: 1, pe: 0, pp: 2, gf: 4, gc: 6, pts: 3,
   },
 
   // PRIMERA
   {
     nombre: "Juventus Parroquial",
+    torneo: "Copa Verano",
     categoria: "Primera",
     pj: 10, pg: 7, pe: 2, pp: 1, gf: 20, gc: 12, pts: 23,
   },
   {
     nombre: "Fútbol Club Norte",
+    torneo: "Copa Verano",
     categoria: "Primera",
     pj: 10, pg: 5, pe: 2, pp: 3, gf: 15, gc: 13, pts: 17,
+  },
+  {
+    nombre: "Club Unión",
+    torneo: "Copa Verano",
+    categoria: "Primera",
+    pj: 10, pg: 4, pe: 2, pp: 4, gf: 13, gc: 14, pts: 14,
+  },
+  {
+    nombre: "La Montaña",
+    torneo: "Liga Ascenso",
+    categoria: "Primera",
+    pj: 6, pg: 4, pe: 1, pp: 1, gf: 12, gc: 6, pts: 13,
+  },
+  {
+    nombre: "Juveniles FC",
+    torneo: "Liga Ascenso",
+    categoria: "Primera",
+    pj: 6, pg: 3, pe: 1, pp: 2, gf: 10, gc: 8, pts: 10,
+  },
+  {
+    nombre: "Estrella Roja",
+    torneo: "Liga Ascenso",
+    categoria: "Primera",
+    pj: 6, pg: 2, pe: 2, pp: 2, gf: 8, gc: 9, pts: 8,
+  },
+  {
+    nombre: "Deportivo La Paz",
+    torneo: "Copa de la Amistad",
+    categoria: "Primera",
+    pj: 5, pg: 3, pe: 1, pp: 1, gf: 9, gc: 4, pts: 10,
+  },
+  {
+    nombre: "Fénix Parroquial",
+    torneo: "Copa de la Amistad",
+    categoria: "Primera",
+    pj: 5, pg: 2, pe: 1, pp: 2, gf: 7, gc: 6, pts: 7,
+  },
+  {
+    nombre: "Unión Norte",
+    torneo: "Copa de la Amistad",
+    categoria: "Primera",
+    pj: 5, pg: 1, pe: 1, pp: 3, gf: 5, gc: 8, pts: 4,
   },
 
   // SEGUNDA
   {
     nombre: "Unión Deportiva Sur",
+    torneo: "Torneo Promesas",
     categoria: "Segunda",
     pj: 10, pg: 4, pe: 1, pp: 5, gf: 12, gc: 18, pts: 13,
   },
   {
-    nombre: "Estrellas del Valle",
+    nombre: "Atlético Juvenil",
+    torneo: "Torneo Promesas",
     categoria: "Segunda",
-    pj: 10, pg: 3, pe: 2, pp: 5, gf: 10, gc: 15, pts: 11,
+    pj: 10, pg: 3, pe: 2, pp: 5, gf: 11, gc: 15, pts: 11,
+  },
+  {
+    nombre: "Escuelas FC",
+    torneo: "Torneo Promesas",
+    categoria: "Segunda",
+    pj: 10, pg: 2, pe: 3, pp: 5, gf: 10, gc: 16, pts: 9,
+  },
+  {
+    nombre: "Estrellas del Valle",
+    torneo: "Serie B Parroquial",
+    categoria: "Segunda",
+    pj: 10, pg: 5, pe: 1, pp: 4, gf: 14, gc: 12, pts: 16,
+  },
+  {
+    nombre: "Técnico Sur",
+    torneo: "Serie B Parroquial",
+    categoria: "Segunda",
+    pj: 10, pg: 4, pe: 2, pp: 4, gf: 12, gc: 10, pts: 14,
+  },
+  {
+    nombre: "Juventud Nueva",
+    torneo: "Serie B Parroquial",
+    categoria: "Segunda",
+    pj: 10, pg: 3, pe: 2, pp: 5, gf: 10, gc: 13, pts: 11,
   },
 
   // FEMENINO
   {
     nombre: "Fuerza Femenina",
+    torneo: "Fútbol Rosa",
     categoria: "Femenino",
     pj: 10, pg: 9, pe: 0, pp: 1, gf: 26, gc: 6, pts: 27,
   },
   {
     nombre: "Guerreras del Sur",
+    torneo: "Fútbol Rosa",
     categoria: "Femenino",
     pj: 10, pg: 8, pe: 1, pp: 1, gf: 22, gc: 8, pts: 25,
   },
+  {
+    nombre: "Rosas Unidas",
+    torneo: "Fútbol Rosa",
+    categoria: "Femenino",
+    pj: 10, pg: 7, pe: 1, pp: 2, gf: 20, gc: 10, pts: 22,
+  },
+  {
+    nombre: "Juvenil Stars",
+    torneo: "Liga Juvenil",
+    categoria: "Femenino",
+    pj: 6, pg: 4, pe: 1, pp: 1, gf: 10, gc: 3, pts: 13,
+  },
+  {
+    nombre: "Estrellas Sub-18",
+    torneo: "Liga Juvenil",
+    categoria: "Femenino",
+    pj: 6, pg: 3, pe: 1, pp: 2, gf: 8, gc: 6, pts: 10,
+  },
+  {
+    nombre: "Jóvenes del Sur",
+    torneo: "Liga Juvenil",
+    categoria: "Femenino",
+    pj: 6, pg: 2, pe: 2, pp: 2, gf: 7, gc: 7, pts: 8,
+  },
+  {
+    nombre: "Unidas FC",
+    torneo: "Copa Igualdad",
+    categoria: "Femenino",
+    pj: 4, pg: 3, pe: 0, pp: 1, gf: 8, gc: 4, pts: 9,
+  },
+  {
+    nombre: "Igualdad Sur",
+    torneo: "Copa Igualdad",
+    categoria: "Femenino",
+    pj: 4, pg: 2, pe: 1, pp: 1, gf: 7, gc: 5, pts: 7,
+  },
+  {
+    nombre: "Mujeres Unidas",
+    torneo: "Copa Igualdad",
+    categoria: "Femenino",
+    pj: 4, pg: 1, pe: 1, pp: 2, gf: 6, gc: 7, pts: 4,
+  },
 ];
 
-// Agrupar por categoría
 const categorias = [...new Set(equipos.map(e => e.categoria))];
 ---
+
 <section class="bg-gray-950 py-12">
   <div class="max-w-7xl mx-auto px-6">
-    <h2 class="text-4xl text-white font-bold text-center mb-12">📊 Tablas de Posiciones por Categoría</h2>
+    <h2 class="text-4xl text-white font-bold text-center mb-12">📊 Tablas de Posiciones por Torneo</h2>
 
     {categorias.map(cat => (
-      <div class="mb-14">
-        <h3 class="text-2xl text-teal-400 font-semibold mb-4 border-b border-teal-600 pb-2">{cat}</h3>
+      <div class="mb-16">
+        <h2 class="text-3xl text-teal-400 font-semibold mb-6 border-b border-teal-700 pb-2">🏆 {cat}</h2>
 
-        <div class="overflow-x-auto">
-          <table class="min-w-full table-auto border-collapse border border-teal-600 text-white text-sm">
-            <thead class="bg-teal-700 uppercase">
-              <tr>
-                <th class="px-3 py-2 border border-teal-600">Pos</th>
-                <th class="px-3 py-2 border border-teal-600 text-left">Equipo</th>
-                <th class="px-2 py-2 border border-teal-600">PJ</th>
-                <th class="px-2 py-2 border border-teal-600">PG</th>
-                <th class="px-2 py-2 border border-teal-600">PE</th>
-                <th class="px-2 py-2 border border-teal-600">PP</th>
-                <th class="px-2 py-2 border border-teal-600">GF</th>
-                <th class="px-2 py-2 border border-teal-600">GC</th>
-                <th class="px-2 py-2 border border-teal-600">Pts</th>
-              </tr>
-            </thead>
-            <tbody class="text-center">
-              {equipos
-                .filter(e => e.categoria === cat)
-                .sort((a, b) => b.pts - a.pts)
-                .map((eq, index) => (
-                <tr class="hover:bg-gray-800 transition-colors">
-                  <td class="border border-teal-700 px-2 py-1">{index + 1}</td>
-                  <td class="border border-teal-700 px-3 py-1 text-left">{eq.nombre}</td>
-                  <td class="border border-teal-700 px-2 py-1">{eq.pj}</td>
-                  <td class="border border-teal-700 px-2 py-1">{eq.pg}</td>
-                  <td class="border border-teal-700 px-2 py-1">{eq.pe}</td>
-                  <td class="border border-teal-700 px-2 py-1">{eq.pp}</td>
-                  <td class="border border-teal-700 px-2 py-1">{eq.gf}</td>
-                  <td class="border border-teal-700 px-2 py-1">{eq.gc}</td>
-                  <td class="border border-teal-700 px-2 py-1 font-bold text-teal-400">{eq.pts}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        {[
+          ...new Set(equipos.filter(e => e.categoria === cat).map(e => e.torneo)),
+        ].map(torneo => (
+          <div class="mb-10">
+            <h3 class="text-xl text-white mb-2">📋 {torneo}</h3>
+            <div class="overflow-x-auto">
+              <table class="min-w-full table-auto border-collapse border border-teal-600 text-white text-sm">
+                <thead class="bg-teal-700 uppercase">
+                  <tr>
+                    <th class="px-3 py-2 border border-teal-600">Pos</th>
+                    <th class="px-3 py-2 border border-teal-600 text-left">Equipo</th>
+                    <th class="px-2 py-2 border border-teal-600">PJ</th>
+                    <th class="px-2 py-2 border border-teal-600">PG</th>
+                    <th class="px-2 py-2 border border-teal-600">PE</th>
+                    <th class="px-2 py-2 border border-teal-600">PP</th>
+                    <th class="px-2 py-2 border border-teal-600">GF</th>
+                    <th class="px-2 py-2 border border-teal-600">GC</th>
+                    <th class="px-2 py-2 border border-teal-600">Pts</th>
+                  </tr>
+                </thead>
+                <tbody class="text-center">
+                  {equipos
+                    .filter(e => e.categoria === cat && e.torneo === torneo)
+                    .sort((a, b) => b.pts - a.pts)
+                    .map((eq, index) => (
+                      <tr class="hover:bg-gray-800 transition-colors">
+                        <td class="border border-teal-700 px-2 py-1">{index + 1}</td>
+                        <td class="border border-teal-700 px-3 py-1 text-left">{eq.nombre}</td>
+                        <td class="border border-teal-700 px-2 py-1">{eq.pj}</td>
+                        <td class="border border-teal-700 px-2 py-1">{eq.pg}</td>
+                        <td class="border border-teal-700 px-2 py-1">{eq.pe}</td>
+                        <td class="border border-teal-700 px-2 py-1">{eq.pp}</td>
+                        <td class="border border-teal-700 px-2 py-1">{eq.gf}</td>
+                        <td class="border border-teal-700 px-2 py-1">{eq.gc}</td>
+                        <td class="border border-teal-700 px-2 py-1 font-bold text-teal-400">{eq.pts}</td>
+                      </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        ))}
       </div>
     ))}
   </div>
