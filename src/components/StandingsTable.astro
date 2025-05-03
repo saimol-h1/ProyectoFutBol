@@ -1,99 +1,101 @@
 ---
 const equipos = [
+  // MÁXIMA
   {
-    posicion: 1,
     nombre: "Deportivo San Juan",
-    pj: 10,
-    pg: 8,
-    pe: 1,
-    pp: 1,
-    gf: 24,
-    gc: 10,
-    pts: 25,
+    categoria: "Máxima",
+    pj: 10, pg: 8, pe: 1, pp: 1, gf: 24, gc: 10, pts: 25,
   },
   {
-    posicion: 2,
-    nombre: "Juventus Parroquial",
-    pj: 10,
-    pg: 7,
-    pe: 2,
-    pp: 1,
-    gf: 20,
-    gc: 12,
-    pts: 23,
-  },
-  {
-    posicion: 3,
     nombre: "Atlético Centro",
-    pj: 10,
-    pg: 6,
-    pe: 1,
-    pp: 3,
-    gf: 18,
-    gc: 14,
-    pts: 19,
+    categoria: "Máxima",
+    pj: 10, pg: 6, pe: 1, pp: 3, gf: 18, gc: 14, pts: 19,
+  },
+
+  // PRIMERA
+  {
+    nombre: "Juventus Parroquial",
+    categoria: "Primera",
+    pj: 10, pg: 7, pe: 2, pp: 1, gf: 20, gc: 12, pts: 23,
   },
   {
-    posicion: 4,
     nombre: "Fútbol Club Norte",
-    pj: 10,
-    pg: 5,
-    pe: 2,
-    pp: 3,
-    gf: 15,
-    gc: 13,
-    pts: 17,
+    categoria: "Primera",
+    pj: 10, pg: 5, pe: 2, pp: 3, gf: 15, gc: 13, pts: 17,
+  },
+
+  // SEGUNDA
+  {
+    nombre: "Unión Deportiva Sur",
+    categoria: "Segunda",
+    pj: 10, pg: 4, pe: 1, pp: 5, gf: 12, gc: 18, pts: 13,
   },
   {
-    posicion: 5,
-    nombre: "Unión Deportiva Sur",
-    pj: 10,
-    pg: 4,
-    pe: 1,
-    pp: 5,
-    gf: 12,
-    gc: 18,
-    pts: 13,
+    nombre: "Estrellas del Valle",
+    categoria: "Segunda",
+    pj: 10, pg: 3, pe: 2, pp: 5, gf: 10, gc: 15, pts: 11,
+  },
+
+  // FEMENINO
+  {
+    nombre: "Fuerza Femenina",
+    categoria: "Femenino",
+    pj: 10, pg: 9, pe: 0, pp: 1, gf: 26, gc: 6, pts: 27,
+  },
+  {
+    nombre: "Guerreras del Sur",
+    categoria: "Femenino",
+    pj: 10, pg: 8, pe: 1, pp: 1, gf: 22, gc: 8, pts: 25,
   },
 ];
+
+// Agrupar por categoría
+const categorias = [...new Set(equipos.map(e => e.categoria))];
 ---
+<section class="bg-gray-950 py-12">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl text-white font-bold text-center mb-12">📊 Tablas de Posiciones por Categoría</h2>
 
-<section class="bg-gray-950 py-10">
-  <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-3xl text-white font-bold text-center mb-6">📊 Tabla de Posiciones</h2>
+    {categorias.map(cat => (
+      <div class="mb-14">
+        <h3 class="text-2xl text-teal-400 font-semibold mb-4 border-b border-teal-600 pb-2">{cat}</h3>
 
-    <div class="overflow-x-auto">
-      <table class="min-w-full table-auto border-collapse border border-teal-600 text-white">
-        <thead class="bg-teal-700 text-sm uppercase text-white">
-          <tr>
-            <th class="px-4 py-2 border border-teal-600">Pos</th>
-            <th class="px-4 py-2 border border-teal-600 text-left">Equipo</th>
-            <th class="px-2 py-2 border border-teal-600">PJ</th>
-            <th class="px-2 py-2 border border-teal-600">PG</th>
-            <th class="px-2 py-2 border border-teal-600">PE</th>
-            <th class="px-2 py-2 border border-teal-600">PP</th>
-            <th class="px-2 py-2 border border-teal-600">GF</th>
-            <th class="px-2 py-2 border border-teal-600">GC</th>
-            <th class="px-2 py-2 border border-teal-600">Pts</th>
-          </tr>
-        </thead>
-        <tbody class="text-center">
-          {equipos.map(eq => (
-            <tr class="hover:bg-gray-800 transition-colors">
-              <td class="border border-teal-700 px-3 py-2">{eq.posicion}</td>
-              <td class="border border-teal-700 px-3 py-2 text-left">{eq.nombre}</td>
-              <td class="border border-teal-700 px-3 py-2">{eq.pj}</td>
-              <td class="border border-teal-700 px-3 py-2">{eq.pg}</td>
-              <td class="border border-teal-700 px-3 py-2">{eq.pe}</td>
-              <td class="border border-teal-700 px-3 py-2">{eq.pp}</td>
-              <td class="border border-teal-700 px-3 py-2">{eq.gf}</td>
-              <td class="border border-teal-700 px-3 py-2">{eq.gc}</td>
-              <td class="border border-teal-700 px-3 py-2 font-bold text-teal-400">{eq.pts}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
+        <div class="overflow-x-auto">
+          <table class="min-w-full table-auto border-collapse border border-teal-600 text-white text-sm">
+            <thead class="bg-teal-700 uppercase">
+              <tr>
+                <th class="px-3 py-2 border border-teal-600">Pos</th>
+                <th class="px-3 py-2 border border-teal-600 text-left">Equipo</th>
+                <th class="px-2 py-2 border border-teal-600">PJ</th>
+                <th class="px-2 py-2 border border-teal-600">PG</th>
+                <th class="px-2 py-2 border border-teal-600">PE</th>
+                <th class="px-2 py-2 border border-teal-600">PP</th>
+                <th class="px-2 py-2 border border-teal-600">GF</th>
+                <th class="px-2 py-2 border border-teal-600">GC</th>
+                <th class="px-2 py-2 border border-teal-600">Pts</th>
+              </tr>
+            </thead>
+            <tbody class="text-center">
+              {equipos
+                .filter(e => e.categoria === cat)
+                .sort((a, b) => b.pts - a.pts)
+                .map((eq, index) => (
+                <tr class="hover:bg-gray-800 transition-colors">
+                  <td class="border border-teal-700 px-2 py-1">{index + 1}</td>
+                  <td class="border border-teal-700 px-3 py-1 text-left">{eq.nombre}</td>
+                  <td class="border border-teal-700 px-2 py-1">{eq.pj}</td>
+                  <td class="border border-teal-700 px-2 py-1">{eq.pg}</td>
+                  <td class="border border-teal-700 px-2 py-1">{eq.pe}</td>
+                  <td class="border border-teal-700 px-2 py-1">{eq.pp}</td>
+                  <td class="border border-teal-700 px-2 py-1">{eq.gf}</td>
+                  <td class="border border-teal-700 px-2 py-1">{eq.gc}</td>
+                  <td class="border border-teal-700 px-2 py-1 font-bold text-teal-400">{eq.pts}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    ))}
   </div>
 </section>
-
