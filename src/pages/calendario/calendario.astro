@@ -1,0 +1,143 @@
+---
+const partidos = [
+  {
+    equipoA: "Tigres FC",
+    equipoB: "Aguilas SC",
+    fecha: "04 de mayo de 2025",
+    hora: "16:00",
+    lugar: "Estadio Central",
+    categoria: "Sub 18",
+    destacado: true,
+    fondo: "/img/estadio1.png"
+  },
+  {
+    equipoA: "Leones del Sur",
+    equipoB: "Condores",
+    fecha: "06 de mayo de 2025",
+    hora: "14:30",
+    lugar: "Cancha Sur",
+    categoria: "Libre",
+    destacado: false,
+    fondo: "/img/estadio2.png"
+  },
+  {
+    equipoA: "Estrella Roja",
+    equipoB: "Fuerza Juvenil",
+    fecha: "08 de mayo de 2025",
+    hora: "18:00",
+    lugar: "Coliseo Norte",
+    categoria: "Femenino",
+    destacado: true,
+    fondo: "/img/estadio3.png"
+  },
+];
+---
+
+<html lang="es">
+  <head>
+    <title>Calendario Oficial</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body class="pagina">
+    <main class="contenedor">
+      <h1 class="titulo">Calendario Oficial</h1>
+      <h2 class="subtitulo">Proximos encuentros programados</h2>
+
+      <div class="lista-partidos">
+        {partidos.map((match) => (
+          <section class="tarjeta-partido" style={`background-image: url('${match.fondo}')`}>
+            <div class="capa-oscura">
+              {match.destacado && <span class="etiqueta">Partido destacado</span>}
+
+              <h3 class="versus">{match.equipoA} vs {match.equipoB}</h3>
+              <p><strong>Fecha:</strong> {match.fecha}</p>
+              <p><strong>Hora:</strong> {match.hora}</p>
+              <p><strong>Lugar:</strong> {match.lugar}</p>
+              <p><strong>Categoria:</strong> {match.categoria}</p>
+            </div>
+          </section>
+        ))}
+      </div>
+    </main>
+  </body>
+</html>
+
+<style>
+  body.pagina {
+    background-color: #111113;
+    color: white;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+  }
+
+  .titulo {
+    font-size: 2rem;
+    color: #00bcd4;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitulo {
+    color: #ccc;
+    margin-bottom: 2rem;
+  }
+
+  .lista-partidos {
+    display: grid;
+    gap: 2rem;
+  }
+
+  .tarjeta-partido {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    height: 260px;
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    border: 1px solid #222;
+  }
+
+  .capa-oscura {
+    background: rgba(0,0,0,0.7);
+    padding: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .etiqueta {
+    display: inline-block;
+    background-color: #00bcd4;
+    color: black;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .versus {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00bcd4;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+    color: #ddd;
+  }
+
+  strong {
+    color: #00bcd4;
+  }
+</style>

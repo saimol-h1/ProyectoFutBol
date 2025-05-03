@@ -2,57 +2,141 @@
 import '../../styles/global.css';
 ---
 
-<section class="bg-[#111113] text-white py-20 min-h-screen font-sans">
-  <div class="max-w-3xl mx-auto px-6">
-    <div class="mb-10 text-center">
-      <h1 class="text-4xl font-extrabold text-cyan-400 mb-2">Convocatoria Oficial</h1>
-      <p class="text-lg text-gray-300">Reunion Extraordinaria de Delegados</p>
+<section class="pagina convocatoria">
+  <div class="contenedor">
+    <div class="encabezado">
+      <h1 class="titulo">Convocatoria Oficial</h1>
+      <p class="subtitulo">Reunion Extraordinaria de Delegados</p>
     </div>
 
-    <div class="bg-[#111113] rounded-xl shadow-md p-8 space-y-6 border border-cyan-700">
-      <p class="text-gray-300">
-        La <strong>Liga Deportiva Parroquial</strong> convoca de manera oficial a todos los delegados de clubes
-        inscritos a participar en una <strong>reunion extraordinaria</strong>, con el fin de coordinar y definir aspectos fundamentales
-        para el arranque de la temporada deportiva 2025.
+    <div class="tarjeta">
+      <p>
+        La <strong>Liga Deportiva Parroquial</strong> convoca oficialmente a todos los delegados de clubes inscritos a una
+        <strong>reunion extraordinaria</strong> para coordinar aspectos clave del inicio de la temporada 2025.
       </p>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-gray-300">
-        <div>
-          <h2 class="text-lg font-semibold text-white mb-1">Fecha:</h2>
-          <p>Jueves, 01 de mayo de 2025</p>
-        </div>
-        <div>
-          <h2 class="text-lg font-semibold text-white mb-1">Hora:</h2>
-          <p>18h00 (hora puntual)</p>
-        </div>
-        <div class="sm:col-span-2">
-          <h2 class="text-lg font-semibold text-white mb-1">Lugar:</h2>
-          <p>Salón de actos de la Liga - Calle Central #45, Ambato</p>
-        </div>
+      <div class="detalle doble">
+        <p><strong> Fecha:</strong> Jueves, 01 de mayo de 2025</p>
+        <p><strong> Hora:</strong> 18h00 (hora puntual)</p>
+        <p class="lugar"><strong> Lugar:</strong> Salon de actos de la Liga - Calle Central #45, Ambato</p>
       </div>
 
-      <div>
-        <h2 class="text-lg font-semibold text-white mb-2">Orden del Dia:</h2>
-        <ul class="list-disc list-inside space-y-1 text-gray-300">
-          <li>Registro de asistencia</li>
-          <li>Confirmacion de clubes y categorias</li>
-          <li>Presentacion del calendario preliminar</li>
-          <li>Revision del reglamento actualizado</li>
-          <li>Asignacion de escenarios y horarios</li>
+      <div class="detalle">
+        <p><strong>Orden del Dia:</strong></p>
+        <ul>
+          <li> - Registro de asistencia</li>
+          <li>- Confirmacion de clubes y categorias</li>
+          <li>- Presentacion del calendario preliminar</li>
+          <li>- Revision del reglamento actualizado</li>
+          <li>- Asignacion de escenarios y horarios</li>
         </ul>
       </div>
 
-      <div class="text-gray-300">
-        <p><strong>Nota importante:</strong> La asistencia es obligatoria. En caso de no poder asistir, el club debera enviar
-        un delegado acreditado con autorizacion escrita.</p>
+      <div class="detalle nota">
+        <p><strong>Nota importante:</strong> La asistencia es obligatoria. En caso de no poder asistir, el club debera enviar un delegado autorizado por escrito.</p>
       </div>
     </div>
 
-    <div class="text-center mt-10">
-      <a href="/"
-         class="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-2 px-6 rounded-lg transition">
-        Volver al inicio
-      </a>
+    <div class="acciones">
+      <a href="/" class="boton-volver">Volver al inicio</a>
     </div>
   </div>
 </section>
+
+<style>
+  .pagina {
+    background-color: #111113;
+    color: white;
+    min-height: 100vh;
+    font-family: sans-serif;
+    padding: 5rem 1rem;
+  }
+
+  .contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .encabezado {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .titulo {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #00bcd4;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitulo {
+    font-size: 1.125rem;
+    color: #ccc;
+  }
+
+  .tarjeta {
+    background-color: #18181c;
+    border: 1px solid #00bcd4;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .detalle p,
+  .detalle li {
+    color: #ddd;
+    font-size: 0.95rem;
+    margin: 0.4rem 0;
+  }
+
+  .detalle strong {
+    color: white;
+  }
+
+  .doble {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .doble p {
+    flex: 1 1 45%;
+  }
+
+  .lugar {
+    flex-basis: 100%;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+    list-style: none;
+  }
+
+  .nota {
+    background-color: #1e1e22;
+    padding: 1rem;
+    border-left: 4px solid #00bcd4;
+  }
+
+  .acciones {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .boton-volver {
+    background-color: #00bcd4;
+    color: white;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+
+  .boton-volver:hover {
+    background-color: #009cb0;
+  }
+</style>
