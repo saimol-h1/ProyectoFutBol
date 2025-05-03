@@ -1,0 +1,129 @@
+---
+const torneos = [
+  // MÁXIMA
+  {
+    nombre: "Torneo Apertura",
+    categoria: "Máxima",
+    estado: "Activo",
+    fechaInicio: "2025-05-01",
+    fechaFin: "2025-06-30",
+    descripcion: "Primera fase del campeonato parroquial.",
+  },
+  {
+    nombre: "Interbarrios 2025",
+    categoria: "Máxima",
+    estado: "Activo",
+    fechaInicio: "2025-05-10",
+    fechaFin: "2025-06-25",
+    descripcion: "Competencia entre barrios de la parroquia.",
+  },
+  {
+    nombre: "Clásico de Campeones",
+    categoria: "Máxima",
+    estado: "Activo",
+    fechaInicio: "2025-07-05",
+    fechaFin: "2025-08-20",
+    descripcion: "Encuentro entre los campeones de las últimas temporadas.",
+  },
+
+  // PRIMERA
+  {
+    nombre: "Copa Verano",
+    categoria: "Primera",
+    estado: "Activo",
+    fechaInicio: "2025-07-01",
+    fechaFin: "2025-08-15",
+    descripcion: "Competencia entre los mejores equipos de la temporada.",
+  },
+  {
+    nombre: "Liga Ascenso",
+    categoria: "Primera",
+    estado: "Activo",
+    fechaInicio: "2025-06-01",
+    fechaFin: "2025-07-10",
+    descripcion: "Los mejores equipos compiten por subir de categoría.",
+  },
+  {
+    nombre: "Copa de la Amistad",
+    categoria: "Primera",
+    estado: "Activo",
+    fechaInicio: "2025-08-01",
+    fechaFin: "2025-09-05",
+    descripcion: "Torneo de integración entre clubes emergentes.",
+  },
+
+  // SEGUNDA
+  {
+    nombre: "Torneo Promesas",
+    categoria: "Segunda",
+    estado: "Activo",
+    fechaInicio: "2025-04-01",
+    fechaFin: "2025-05-15",
+    descripcion: "Participan nuevos equipos inscritos.",
+  },
+  {
+    nombre: "Serie B Parroquial",
+    categoria: "Segunda",
+    estado: "Activo",
+    fechaInicio: "2025-06-10",
+    fechaFin: "2025-07-25",
+    descripcion: "Competencia base para ascenso a Primera.",
+  },
+
+  // FEMENINO
+  {
+    nombre: "Liga Juvenil",
+    categoria: "Femenino",
+    estado: "Activo",
+    fechaInicio: "2025-04-15",
+    fechaFin: "2025-05-20",
+    descripcion: "Torneo reservado para jóvenes sub-18.",
+  },
+  {
+    nombre: "Fútbol Rosa",
+    categoria: "Femenino",
+    estado: "Activo",
+    fechaInicio: "2025-06-01",
+    fechaFin: "2025-07-20",
+    descripcion: "Torneo exclusivo para clubes femeninos.",
+  },
+  {
+    nombre: "Copa Igualdad",
+    categoria: "Femenino",
+    estado: "Activo",
+    fechaInicio: "2025-07-10",
+    fechaFin: "2025-08-30",
+    descripcion: "Iniciativa para fomentar la equidad deportiva.",
+  },
+];
+
+// Agrupar por categorías
+const categorias = [...new Set(torneos.map(t => t.categoria))];
+---
+
+<section class="bg-gradient-to-b from-black via-gray-900 to-black py-10 min-h-screen">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-bold text-white text-center mb-10">🏆 Torneos por Categoría</h2>
+
+    {categorias.map(cat => (
+      <div class="mb-12">
+        <h3 class="text-2xl font-semibold text-teal-400 border-b border-teal-600 pb-2 mb-6">{cat}</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {torneos.filter(t => t.categoria === cat).map(torneo => (
+            <div class="bg-gray-800 border border-teal-500 p-6 rounded-xl shadow-xl hover:scale-105 transition-transform duration-300">
+              <h4 class="text-xl font-semibold text-teal-300 mb-2">{torneo.nombre}</h4>
+              <p class="text-gray-300 text-sm mb-3">{torneo.descripcion}</p>
+              <p class="text-gray-400 text-sm">
+                <strong>Inicio:</strong> {torneo.fechaInicio}<br />
+                <strong>Fin:</strong> {torneo.fechaFin}
+              </p>
+              <span class="inline-block mt-3 bg-green-600 text-white text-xs px-3 py-1 rounded-full">
+                {torneo.estado}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
