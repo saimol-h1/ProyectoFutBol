@@ -1,24 +1,42 @@
-# build output
-dist/
+# ───────────────────────────────────────────────
+# Node.js
+# ───────────────────────────────────────────────
 
-# generated types
-.astro/
+# Carpetas de dependencias que se generan automáticamente y no deben subirse
+node_modules/       # Contiene todas las dependencias instaladas con npm/yarn/pnpm. Muy pesado y dependiente del sistema.
 
-# dependencies
-node_modules/
-
-# logs
-npm-debug.log*
-yarn-debug.log*
+# Archivos de logs que se generan en tiempo de ejecución o depuración
+npm-debug.log*      # Archivos de errores generados por npm
+yarn-debug.log*     # Archivos de errores generados por yarn
 yarn-error.log*
-pnpm-debug.log*
+pnpm-debug.log*     # Archivos generados por pnpm al fallar
 
-# environment variables
-.env
-.env.production
+# Variables de entorno sensibles
+.env                # Contiene claves API, credenciales, etc.
+.env.production     # Igual que el anterior pero para producción
 
-# macOS-specific files
-.DS_Store
+---
 
-# jetbrains setting folder
-.idea/
+# ───────────────────────────────────────────────
+# Astro (Framework para frontend y backend)
+# ───────────────────────────────────────────────
+
+dist/               # Carpeta de salida de compilación, se genera automáticamente (build output)
+.astro/             # Tipos generados automáticamente por Astro durante la compilación
+
+---
+
+# ───────────────────────────────────────────────
+# macOS (Sistema operativo)
+# ───────────────────────────────────────────────
+
+.DS_Store           # Archivo oculto creado por macOS para guardar metadatos de carpetas (irrelevante para el código fuente)
+
+---
+
+# ───────────────────────────────────────────────
+# JetBrains IDEs (IntelliJ, WebStorm, etc.)
+# ───────────────────────────────────────────────
+
+.idea/              # Carpeta de configuración específica del IDE JetBrains, no debe compartirse ya que es personal por desarrollador
+
