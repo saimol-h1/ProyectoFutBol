@@ -2,46 +2,141 @@
 import '../../styles/global.css';
 ---
 
-<section class="bg-[#111113] text-white py-20 min-h-screen font-sans">
-  <div class="max-w-3xl mx-auto px-6">
-    <div class="mb-10 text-center">
-      <h1 class="text-4xl font-extrabold text-cyan-400 mb-2">Actualizacion del Reglamento Oficial</h1>
-      <p class="text-lg text-gray-300">Temporada Deportiva 2025</p>
+<section class="pagina convocatoria">
+  <div class="contenedor">
+    <div class="encabezado">
+      <h1 class="titulo">Actualizacion del Reglamento Oficial</h1>
+      <p class="subtitulo">Temporada Deportiva 2025</p>
     </div>
 
-    <div class="bg-[#111113] rounded-xl shadow-md p-8 space-y-6 border border-cyan-700">
-      <p class="text-gray-300">
+    <div class="tarjeta">
+      <p>
         La <strong>Liga Deportiva Parroquial</strong> informa a todos los clubes, delegados y participantes que se ha
         realizado una actualizacion oficial del reglamento general que regira durante la temporada 2025.
       </p>
 
-      <p class="text-gray-300">
+      <p>
         Esta actualizacion busca mejorar el desarrollo de los torneos, fortalecer la organizacion, y asegurar el
         cumplimiento de normas que promuevan el juego limpio y la participacion responsable de todos los actores.
       </p>
 
-      <div>
-        <h2 class="text-lg font-semibold text-white mb-2">Cambios Principales:</h2>
-        <ul class="list-disc list-inside space-y-1 text-gray-300">
-          <li>Se implementa la tarjeta naranja como medida disciplinaria preventiva</li>
-          <li>Se ajusta la duracion de los partidos en categoria infantil</li>
-          <li>Uso obligatorio de canilleras en todas las categorias</li>
-          <li>Requisitos actualizados para la validacion medica anual</li>
-          <li>Mayor control sobre la documentacion de inscripcion</li>
+      <div class="detalle">
+        <p><strong>Cambios Principales:</strong></p>
+        <ul>
+          <li> - Se implementa la tarjeta naranja como medida disciplinaria preventiva</li>
+          <li> - Se ajusta la duracion de los partidos en categoria infantil</li>
+          <li> - Uso obligatorio de canilleras en todas las categorias</li>
+          <li> - Requisitos actualizados para la validacion medica anual</li>
+          <li> - Mayor control sobre la documentacion de inscripcion</li>
         </ul>
       </div>
 
-      <div class="text-gray-300">
+      <div class="detalle nota">
         <p><strong>Nota:</strong> El reglamento completo estara disponible para su consulta en la mesa tecnica de la liga. Se recomienda
         a todos los clubes revisar los puntos actualizados antes del inicio de la temporada.</p>
       </div>
     </div>
 
-    <div class="text-center mt-10">
-      <a href="/"
-         class="inline-block bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-2 px-6 rounded-lg transition">
-        Volver al inicio
-      </a>
+    <div class="acciones">
+      <a href="/" class="boton-volver">Volver al inicio</a>
     </div>
   </div>
 </section>
+
+<style>
+  .pagina {
+    background-color: #111113;
+    color: white;
+    min-height: 100vh;
+    font-family: sans-serif;
+    padding: 5rem 1rem;
+  }
+
+  .contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .encabezado {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .titulo {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #00bcd4;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitulo {
+    font-size: 1.125rem;
+    color: #ccc;
+  }
+
+  .tarjeta {
+    background-color: #18181c;
+    border: 1px solid #00bcd4;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .detalle p,
+  .detalle li {
+    color: #ddd;
+    font-size: 0.95rem;
+    margin: 0.4rem 0;
+  }
+
+  .detalle strong {
+    color: white;
+  }
+
+  .doble {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .doble p {
+    flex: 1 1 45%;
+  }
+
+  .lugar {
+    flex-basis: 100%;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+    list-style: none;
+  }
+
+  .nota {
+    background-color: #1e1e22;
+    padding: 1rem;
+    border-left: 4px solid #00bcd4;
+  }
+
+  .acciones {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .boton-volver {
+    background-color: #00bcd4;
+    color: white;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+
+  .boton-volver:hover {
+    background-color: #009cb0;
+  }
+</style>
