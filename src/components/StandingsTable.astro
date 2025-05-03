@@ -1,1 +1,99 @@
-Tabla de posiciones StandingsTable.astro Tabla con clasificación de equipos
+---
+const equipos = [
+  {
+    posicion: 1,
+    nombre: "Deportivo San Juan",
+    pj: 10,
+    pg: 8,
+    pe: 1,
+    pp: 1,
+    gf: 24,
+    gc: 10,
+    pts: 25,
+  },
+  {
+    posicion: 2,
+    nombre: "Juventus Parroquial",
+    pj: 10,
+    pg: 7,
+    pe: 2,
+    pp: 1,
+    gf: 20,
+    gc: 12,
+    pts: 23,
+  },
+  {
+    posicion: 3,
+    nombre: "Atlético Centro",
+    pj: 10,
+    pg: 6,
+    pe: 1,
+    pp: 3,
+    gf: 18,
+    gc: 14,
+    pts: 19,
+  },
+  {
+    posicion: 4,
+    nombre: "Fútbol Club Norte",
+    pj: 10,
+    pg: 5,
+    pe: 2,
+    pp: 3,
+    gf: 15,
+    gc: 13,
+    pts: 17,
+  },
+  {
+    posicion: 5,
+    nombre: "Unión Deportiva Sur",
+    pj: 10,
+    pg: 4,
+    pe: 1,
+    pp: 5,
+    gf: 12,
+    gc: 18,
+    pts: 13,
+  },
+];
+---
+
+<section class="bg-gray-950 py-10">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl text-white font-bold text-center mb-6">📊 Tabla de Posiciones</h2>
+
+    <div class="overflow-x-auto">
+      <table class="min-w-full table-auto border-collapse border border-teal-600 text-white">
+        <thead class="bg-teal-700 text-sm uppercase text-white">
+          <tr>
+            <th class="px-4 py-2 border border-teal-600">Pos</th>
+            <th class="px-4 py-2 border border-teal-600 text-left">Equipo</th>
+            <th class="px-2 py-2 border border-teal-600">PJ</th>
+            <th class="px-2 py-2 border border-teal-600">PG</th>
+            <th class="px-2 py-2 border border-teal-600">PE</th>
+            <th class="px-2 py-2 border border-teal-600">PP</th>
+            <th class="px-2 py-2 border border-teal-600">GF</th>
+            <th class="px-2 py-2 border border-teal-600">GC</th>
+            <th class="px-2 py-2 border border-teal-600">Pts</th>
+          </tr>
+        </thead>
+        <tbody class="text-center">
+          {equipos.map(eq => (
+            <tr class="hover:bg-gray-800 transition-colors">
+              <td class="border border-teal-700 px-3 py-2">{eq.posicion}</td>
+              <td class="border border-teal-700 px-3 py-2 text-left">{eq.nombre}</td>
+              <td class="border border-teal-700 px-3 py-2">{eq.pj}</td>
+              <td class="border border-teal-700 px-3 py-2">{eq.pg}</td>
+              <td class="border border-teal-700 px-3 py-2">{eq.pe}</td>
+              <td class="border border-teal-700 px-3 py-2">{eq.pp}</td>
+              <td class="border border-teal-700 px-3 py-2">{eq.gf}</td>
+              <td class="border border-teal-700 px-3 py-2">{eq.gc}</td>
+              <td class="border border-teal-700 px-3 py-2 font-bold text-teal-400">{eq.pts}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
