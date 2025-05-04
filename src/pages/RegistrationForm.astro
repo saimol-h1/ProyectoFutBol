@@ -1,0 +1,121 @@
+---
+import "../styles/RegistrationForm.css";
+---
+
+<head>
+  <title>Registrar jugadores</title>
+  <meta charset="UTF-8" />
+</head>
+
+<section class="container">
+  <header>Registrar Jugador</header>
+  <form action="#" class="form" method="POST" enctype="multipart/form-data">
+    <div class="container-top">
+      <div class="container-top-left">
+        <div class="input-box">
+          <label>Nombres</label>
+          <input type="text" placeholder="Ingresa los nombres" required />
+        </div>
+
+        <div class="input-box">
+          <label>Apellidos</label>
+          <input type="text" placeholder="Ingresa los apellidos" required />
+        </div>
+
+        <div class="input-box">
+          <label>Correo</label>
+          <input type="email" placeholder="Ingresa el correo" required />
+        </div>
+      </div>
+      <div class="container-top-right">
+        <div class="image-box">
+          <label>Foto del jugador</label>
+          <input class="chooser-image" type="file" accept="image/*" id="fotoJugador" required />
+          <div class="container-image">
+            <img class="image-player"
+              id="preview"
+              src=""
+              alt="Vista previa"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="input-box">
+        <label>Número de teléfono</label>
+        <input
+          type="number"
+          placeholder="Ingresa el número de teléfono"
+          required
+        />
+      </div>
+      <div class="input-box">
+        <label>Fecha de nacimiento</label>
+        <input type="date" required />
+      </div>
+    </div>
+
+    <div class="gender-box">
+      <h3>Género</h3>
+      <div class="gender-option">
+        <div class="gender">
+          <input type="radio" id="check-male" name="gender" checked />
+          <label for="check-male">Masculino</label>
+        </div>
+        <div class="gender">
+          <input type="radio" id="check-female" name="gender" />
+          <label for="check-female">Femenino</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-box address">
+      <label>Dirección</label>
+      <input type="text" placeholder="Ingresa la dirección" required />
+    </div>
+
+    <div class="input-box address">
+      <label>Información del equipo</label>
+      <div class="column">
+        <div class="select-box">
+          <select required>
+            <option value="" hidden>Equipo</option>
+            <option>Manchester City</option>
+            <option>Barcelona</option>
+            <option>Real Madrid</option>
+          </select>
+        </div>
+        <input type="number" placeholder="Número de camiseta" required />
+      </div>
+    </div>
+
+    <button>Ingresar</button>
+  </form>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const fileInput = document.getElementById(
+      "fotoJugador"
+    ) as HTMLInputElement | null;
+    const preview = document.getElementById(
+      "preview"
+    ) as HTMLImageElement | null;
+
+    if (!fileInput || !preview) return;
+
+    fileInput.addEventListener("change", () => {
+      const file = fileInput.files?.[0];
+
+      if (file) {
+        preview.src = URL.createObjectURL(file);
+        preview.style.display = "block";
+      } else {
+        preview.style.display = "none";
+        preview.src = "";
+      }
+    });
+  });
+</script>

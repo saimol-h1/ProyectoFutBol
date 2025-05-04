@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(to bottom, #000000, #111827, #000000);
+}
+.container {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: #1f2937;
+  padding: 25px;
+  border-style: solid; 
+  border-radius: 8px;
+  border-width: 2px;
+  border-color: #5eead4;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.container header {
+  font-size: 1.5rem;
+  color: #5eead4;
+  font-weight: 700;
+  text-align: center;
+}
+.container-top {
+  display: flex;
+  column-gap: 15px;
+}
+.container-top-left{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-top-right{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .form {
+  margin-top: 30px;
+}
+.image-box {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image-box label {
+  align-self: flex-start;
+  font-weight: 600;            /* font-semibold */
+  color: #5eead4; 
+}
+.container-image {
+  margin-top: 5px;
+  position: relative;
+  height: 200px;
+  max-width: 200px;
+  width: 100%; border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  background-color: #e5e5e5;
+  border-radius: 8px;
+}
+.image-player {
+  max-height: 100%;
+  display: none;
+  border-radius: 8px;
+}
+.form :where(.image-box input, .select-box) {
+  position: relative;
+  height: 30px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  color: #707070;
+  margin-top: 8px;
+  border: none;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.form .input-box {
+  width: 100%;
+  margin-top: 20px;
+}
+.input-box label {
+  font-weight: 600;            
+  color: #5eead4; 
+}
+.image-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form :where(.input-box input, .select-box) {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  background-color: #e5e5e5;
+  color: #707070;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+.input-box input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+.form .column {
+  display: flex;
+  column-gap: 15px;
+}
+.form .gender-box {
+  margin-top: 20px;
+}
+.gender-box h3 {
+  color: #5eead4;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+.form :where(.gender-option, .gender) {
+  display: flex;
+  align-items: center;
+  column-gap: 50px;
+  flex-wrap: wrap;
+}
+.form .gender {
+  column-gap: 5px;
+}
+.gender input {
+  accent-color: #5eead4;
+}
+.form :where(.gender input, .gender label) {
+  cursor: pointer;
+}
+.gender label {
+  color: #e5e5e5;
+}
+.address :where(input, .select-box) {
+  margin-top: 15px;
+}
+.select-box select {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: #707070;
+  font-size: 1rem;            
+  background-color: #e5e5e5;   
+}
+.form button {
+  height: 55px;
+  width: 100%;
+  color: #e5e5e5;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #4ec1b0;
+}
+.form button:hover {
+  background: #3e9d8f;
+}
+.chooser-image {
+  color: #e5e5e5;
+}
+/*Responsivo*/
+@media screen and (max-width: 500px) {
+  .form .column {
+    flex-wrap: wrap;
+  }
+  .form :where(.gender-option, .gender) {
+    row-gap: 15px;
+  }
+}
