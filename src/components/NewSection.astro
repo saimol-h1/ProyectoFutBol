@@ -1,0 +1,74 @@
+---
+const noticias = [
+  {
+    titulo: "Reunión con delegados de clubes",
+    fecha: "01 de mayo de 2025",
+    enlace: "/noticias/reunion-delegados",
+    tipo: "reunion",
+    importante: true,
+    descripcion: "Se convoca a los delegados oficiales a una reunión clave para definir horarios y categorías del torneo entrante.",
+  },
+  {
+    titulo: "Actualización del reglamento oficial",
+    fecha: "30 de abril de 2025",
+    enlace: "/noticias/reglamento-actualizado",
+    tipo: "comunicado",
+    importante: true,
+    descripcion: "Se han realizado ajustes importantes en el reglamento general para garantizar el juego limpio y la inclusión.",
+  },
+  {
+    titulo: "Cierre de inscripciones categoría femenina",
+    fecha: "28 de abril de 2025",
+    enlace: "/noticias/cierre-inscripciones-femenino",
+    tipo: "comunicado",
+    importante: false,
+    descripcion: "Último llamado para los equipos femeninos. Se cerrarán las inscripciones este viernes a las 17h00.",
+  },
+  {
+    titulo: "Sorteo de grupos en vivo",
+    fecha: "25 de abril de 2025",
+    enlace: "/noticias/sorteo-en-vivo",
+    tipo: "evento",
+    importante: false,
+    descripcion: "El sorteo para la fase de grupos se transmitirá en línea desde la página oficial este sábado.",
+  },
+];
+
+const destacadas = noticias.filter(n => n.importante || n.tipo === 'reunion');
+---
+
+<section class="bg-[#111113] py-16 text-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="mb-10">
+      <h2 class="text-4xl font-extrabold tracking-tight mb-2 flex items-center gap-3">
+        <svg class="w-8 h-8 text-cyan-400" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M2 4a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H9l-4 4v-4H4a2 2 0 01-2-2V4z" />
+        </svg>
+        Noticias y Comunicados
+      </h2>
+      <div class="h-1 w-20 bg-cyan-400 rounded"></div>
+    </div>
+
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {destacadas.map((item) => (
+        <article class="bg-[#1c1c1e] rounded-xl p-6 border-l-4 border-cyan-500 hover:shadow-lg transition-all">
+          <h3 class="text-2xl font-semibold text-white mb-2">
+            <a href={item.enlace} class="hover:text-cyan-400 transition">
+              {item.titulo}
+            </a>
+          </h3>
+          <p class="text-sm text-gray-400">{item.fecha}</p>
+          <p class="text-sm text-gray-300 mt-4">{item.descripcion}</p>
+          <div class="mt-4">
+            <a
+              href={item.enlace}
+              class="text-cyan-400 font-medium hover:underline"
+            >
+              Leer más →
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

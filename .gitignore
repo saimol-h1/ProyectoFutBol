@@ -1,24 +1,36 @@
-# build output
-dist/
+# ───────────────────────────────────────────────
+# Node.js
+# ───────────────────────────────────────────────
 
-# generated types
-.astro/
-
-# dependencies
+# Carpetas de dependencias que se generan automáticamente y no deben subirse
 node_modules/
 
-# logs
+# Archivos de logs que se generan en tiempo de ejecución o depuración
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# environment variables
+# Variables de entorno sensibles
 .env
 .env.production
 
-# macOS-specific files
+# ───────────────────────────────────────────────
+# Astro (Framework para frontend y backend)
+# ───────────────────────────────────────────────
+
+dist/
+.astro/
+
+# ───────────────────────────────────────────────
+# macOS (Sistema operativo)
+# ───────────────────────────────────────────────
+
 .DS_Store
 
-# jetbrains setting folder
+# ───────────────────────────────────────────────
+# JetBrains IDEs (IntelliJ, WebStorm, etc.)
+# ───────────────────────────────────────────────
+
 .idea/
+
